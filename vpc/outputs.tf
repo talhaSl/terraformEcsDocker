@@ -15,7 +15,7 @@ output "environment" {
 
 # export the vpc id
 output "vpc_id" {
-  value = var.aws_vpc.vpc.id
+  value = aws_vpc.vpc.id
 }
 
 # export the internet gateway
@@ -55,10 +55,10 @@ output "private_data_subnet_az2_id" {
 
 # export the first availability zone
 output "availability_zone_1" {
-  value = data.aws_availability_zones.available_zones.name[0]
+  value = data.aws_availability_zones.available_zones.names[0]
 }
 
 # export the second availability zone
 output "availability_zone_2" {
-  value = data.aws_availability_zones.available_zones.name[1]
+  value = data.aws_availability_zones.available_zones.names[1]
 }
